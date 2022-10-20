@@ -1,0 +1,6 @@
+[
+    {
+        "name": "TestKit",
+        "environmentSetupScript": "${workspaceFolder}/hetero_edgesoftmax/script/setup_dev_env.sh"
+    }
+]
