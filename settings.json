@@ -84,5 +84,7 @@
         "-DBUILD_TORCH_API=ON",
         "-DCMAKE_PREFIX_PATH=`python -c 'import torch;print(torch.utils.cmake_prefix_path)'`"
     ],
-    "cmake.environmentSetupScript": "${workspaceFolder}/hetero_edgesoftmax/script/setup_dev_env.sh"
+    "cmake.environmentSetupScript": "${workspaceFolder}/hetero_edgesoftmax/script/setup_dev_env.sh",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.defaultInterpreterPath": "/home/kwu/anaconda3/envs/dev_dgl_torch/bin/python",
 }
