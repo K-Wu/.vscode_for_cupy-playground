@@ -5,13 +5,70 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/hetero_edgesoftmax/test_compiler_discover_cutlass_library_cu_cc",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
             "name": "Python: RGCNSingleLayer",
             "type": "python",
             "request": "launch",
             "module": "python.RGCN.RGCNSingleLayer",
-            "args": ["-d","fb15k", "--input_dim","128", "--num_classes","16"],
+            "args": [
+                "-d",
+                "fb15k",
+                "--input_dim",
+                "128",
+                "--num_classes",
+                "16"
+            ],
             "justMyCode": true,
             "cwd": "${workspaceFolder}/hetero_edgesoftmax",
+        },
+        {
+            "name": "Python: RGATSingleLayer",
+            "type": "python",
+            "request": "launch",
+            "module": "python.RGAT.train",
+            "args": [
+                "-d",
+                "fb15k",
+                "--num_layers",
+                "1",
+                "--full_graph_training"
+            ],
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/hetero_edgesoftmax",
+        },
+        {
+            "name": "CUDA C++:  RGATSingleLayer",
+            "type": "cuda-gdb",
+            "request": "launch",
+            "program": "/home/kwu/anaconda3/envs/dev_dgl_torch/bin/python",
+            "args": [
+                "-m python.RGAT.train -d fb15k --num_layers 1 --full_graph_training"
+            ],
+            "cwd": "${workspaceFolder}/hetero_edgesoftmax",
+            "stopAtEntry": true,
         }
     ]
 }
