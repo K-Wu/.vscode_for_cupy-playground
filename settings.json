@@ -1,9 +1,9 @@
 {
     "makefile.extensionOutputFolder": "./.vscode",
     "files.associations": {
-        "*.inc": "cpp",
         "*.cu": "cpp",
         "*.cuh": "cpp",
+        "*.inc": "cpp",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -62,7 +62,27 @@
         "iomanip": "cpp",
         "cinttypes": "cpp",
         "variant": "cpp",
-        "cfenv": "cpp"
+        "cfenv": "cpp",
+        "list": "cpp",
+        "unordered_set": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "slist": "cpp",
+        "typeindex": "cpp",
+        "__config": "cpp",
+        "bitset": "cpp",
+        "shared_mutex": "cpp",
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "__bit_reference": "cpp",
+        "__debug": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__threading_support": "cpp",
+        "__tuple": "cpp",
+        "__nullptr": "cpp"
     },
     "formatFiles.excludedFolders": [
         "node_modules",
@@ -77,7 +97,7 @@
         "**/data"
     ],
     "cmake.configureArgs": [
-        "-DCUDA_ARCHS=80",
+        "-DCUDA_ARCHS=86",
         "-DBUILD_TEST=ON",
         "-DBUILD_BENCHMARK=ON",
         "-DBUILD_GENERATED=ON",
@@ -87,4 +107,8 @@
     "cmake.environmentSetupScript": "${workspaceFolder}/hetero_edgesoftmax/script/setup_dev_env.sh",
     "python.analysis.typeCheckingMode": "basic",
     "python.defaultInterpreterPath": "/home/kwu/anaconda3/envs/dev_dgl_torch/bin/python",
+    "terminal.integrated.env.linux": {
+    // needs modification of ~/.bashrc check https://stackoverflow.com/a/60438516
+    "BASH_INIT_COMMAND": "source ${workspaceFolder}/hetero_edgesoftmax/script/setup_dev_env.sh"
+}
 }
