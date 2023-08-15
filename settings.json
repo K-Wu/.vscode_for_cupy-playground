@@ -96,19 +96,11 @@
         "**/build",
         "**/data"
     ],
-    "cmake.configureArgs": [
-        "-DCUDA_ARCHS=86",
-        "-DBUILD_TEST=ON",
-        "-DBUILD_BENCHMARK=ON",
-        "-DBUILD_GENERATED=ON",
-        "-DBUILD_TORCH_API=ON",
-        "-DCMAKE_PREFIX_PATH=`python -c 'import torch;print(torch.utils.cmake_prefix_path)'`"
-    ],
-    "cmake.environmentSetupScript": "${workspaceFolder}/hetero_edgesoftmax/script/setup_dev_env.sh",
+    "cmake.environmentSetupScript": "${workspaceFolder}/.vscode/setup_dev_env.sh",
     "python.analysis.typeCheckingMode": "basic",
-    "python.defaultInterpreterPath": "/home/kwu/anaconda3/envs/dev_dgl_torch/bin/python",
+    "python.defaultInterpreterPath": "/home/kwu/anaconda3/envs/dev_cupy_graph/bin/python",
     "terminal.integrated.env.linux": {
     // needs modification of ~/.bashrc check https://stackoverflow.com/a/60438516
-    "BASH_INIT_COMMAND": "source ${workspaceFolder}/hetero_edgesoftmax/script/setup_dev_env.sh"
+    "BASH_INIT_COMMAND": "source ${workspaceFolder}/.vscode/setup_dev_env.sh"
 }
 }

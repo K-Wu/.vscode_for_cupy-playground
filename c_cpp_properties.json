@@ -4,10 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/kwu/anaconda3/envs/dev_dgl_torch/lib/python3.9/site-packages/torch/include",
-                "/home/kwu/anaconda3/envs/dev_dgl_torch/lib/python3.9/site-packages/torch/include/torch/csrc/api/include",
                 "/usr/local/cuda/include/",
-                "/home/kwu/anaconda3/envs/dev_dgl_torch/include/python3.9",
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
