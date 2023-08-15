@@ -100,7 +100,7 @@
     "python.analysis.typeCheckingMode": "basic",
     "python.defaultInterpreterPath": "/home/kwu/anaconda3/envs/dev_cupy_graph/bin/python",
     "terminal.integrated.env.linux": {
-    // needs modification of ~/.bashrc check https://stackoverflow.com/a/60438516
-    "BASH_INIT_COMMAND": "source ${workspaceFolder}/.vscode/setup_dev_env.sh"
-}
+        // needs modification of ~/.bashrc check https://stackoverflow.com/a/60438516
+        "BASH_INIT_COMMAND": "source ${workspaceFolder}/.vscode/setup_dev_env.sh",
+    }
 }
